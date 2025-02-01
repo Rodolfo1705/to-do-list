@@ -21,6 +21,9 @@ Recomendação: IntelliJ IDEA.
 
 <img src="img/img-1.png" width="600">
 
+<br>
+<br>
+
  - Clique em qualquer um dos ícones de 'Start'.
 
 </h4>
@@ -41,5 +44,7 @@ Recomendação: Postman
 * Feito isso, por conta do banco utilizado ser o H2 (banco em memória) execute primeiro a requisição de POST, para que algum registro seja adicionado ao banco.
 
 </h4>
+
+<br>
 
 <h2> Prontinho! Teste à vontade. </h2>
