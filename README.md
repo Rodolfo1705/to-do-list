@@ -6,7 +6,7 @@
 
 <h4> Rode o seguinte comando no diretorio que você deseja clonar o projeto: </h4>
 
-<h3> git clone https://github.com/Rodolfo1705/to-do-list.git</h3>
+    git clone https://github.com/Rodolfo1705/to-do-list.git
 
 <br>
 
