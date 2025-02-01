@@ -4,6 +4,7 @@ import com.desafio.to_do.model.dto.request.TarefaRequest;
 import com.desafio.to_do.model.dto.request.TarefaUpdateRequest;
 import com.desafio.to_do.model.dto.response.TarefaResponse;
 import com.desafio.to_do.service.TarefaService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -20,7 +21,7 @@ public class TarefaController {
 
 
     @PostMapping
-    public ResponseEntity<Void> criarTarefa(@RequestBody TarefaRequest tarefaRequest) {
+    public ResponseEntity<Void> criarTarefa(@RequestBody @Valid TarefaRequest tarefaRequest) {
         Long idTarefaCriada = tarefaService.saveTarefa(tarefaRequest);
 
         URI uri = ServletUriComponentsBuilder
@@ -45,7 +46,7 @@ public class TarefaController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<Void> updateTarefa(@PathVariable Long id, @RequestBody TarefaUpdateRequest tarefaUpdateRequest) {
+    public ResponseEntity<Void> updateTarefa(@PathVariable Long id, @RequestBody @Valid TarefaUpdateRequest tarefaUpdateRequest) {
         tarefaService.updateTarefa(id, tarefaUpdateRequest);
         return ResponseEntity.ok().build();
     }
